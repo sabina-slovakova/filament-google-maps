@@ -156,7 +156,8 @@ window.filamentGoogleMapsWidget = ($wire, config) => {
                 let that = self;
 
                 google.maps.event.addListener(marker, 'click', (event) => {
-                    self.wire.mountTableAction('edit', marker.model_id)
+                    self.wire.editRecord(marker.model_id)
+                    // self.wire.mountTableAction('edit', marker.model_id)
                     // this.infoWindow.setContent(location.label);
                     // this.infoWindow.open(this.map, marker);
                 })

@@ -28,9 +28,9 @@
             }
         @endif
         @if($hasJs())
-            if(!document.getElementById('filament-google-maps-js')){
+            if(!document.getElementById('filament-google-maps-widget')){
             const script = document.createElement('script');
-            script.id   = 'filament-google-maps-js';
+            script.id   = 'filament-google-maps-widget';
             script.src = '{{ $jsUrl() }}';
             document.head.appendChild(script);
             }
